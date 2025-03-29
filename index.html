@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbeeh Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gradient-to-r from-green-400 to-blue-500 flex flex-col items-center justify-center h-screen">
+    <div id="goalInput" class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Set Your Goal</h2>
+        <input type="number" id="goalAmount" placeholder="Enter goal amount" class="border border-gray-300 p-2 w-full mb-4 rounded">
+        <button id="setGoal" class="bg-blue-500 text-white p-2 rounded">Set Goal</button>
+    </div>
+    <div id="counter" class="hidden w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Tasbeeh Counter</h2>
+        <canvas id="pieChart" class="mb-4"></canvas>
+        <div class="flex gap-4">
+            <button id="increment" class="bg-green-500 text-white p-2 rounded flex-1">Increment</button>
+            <button id="reset" class="bg-red-500 text-white p-2 rounded flex-1">Reset</button>
+        </div>
+        <p id="currentCount" class="mt-4 text-lg">Current Count: 0</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
